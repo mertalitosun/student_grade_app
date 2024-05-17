@@ -14,3 +14,4 @@ Nodejs öğrendikçe proje de adım adım gelişip ilerleyecek öğrendiklerimi 
 ## Versiyon-2
 ### Sequelize kullanımı
 ### Authentication 
+### Not hesaplaması - tahmini not
