@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head') %>
+</head>
+<body>
+    <%- include('../../partials/navbar') %>
+    <div class="container">
+        <div class="row">
+          <% courses.forEach(course => { %>
+            <div class="col-md-4">
+              <a href="/user/<%= course.id %>/courses">
+                <div class="card usersCard mb-3">
+                  <div class="card-body">
+                    <h3><%= course.name %></h3>
+                    <p><%= course.description %></p>
+                    <div class="btns">
+                      <a href="">Düzenle</a>
+                      <a href="/admin/course/delete/<%= course.id %>">Sil</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          <% }) %>
+          <div class="col-md-4">
+            <div class="card usersCard">
+              <div class="card-body">
+                <h3>Ders Ekle</h3>
+                <div class="createUser">
+                  <a href="/admin/course/create">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+  

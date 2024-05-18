@@ -2,7 +2,7 @@
   <div class="row">
     <% users.forEach(user => { %>
       <div class="col-md-4">
-        <a href="">
+        <a href="/user/<%= user.id %>/courses">
           <div class="card usersCard mb-3">
             <div class="card-body">
               <h3><%= user.name %></h3>
