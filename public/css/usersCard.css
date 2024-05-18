@@ -1,0 +1,19 @@
+.usersCard{
+    min-height: 150px;
+    max-width: 250px;
+    border: 1px solid #000;
+}
+/* .usersCard .btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+a{
+    text-decoration: none;
+}
+.usersCard .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

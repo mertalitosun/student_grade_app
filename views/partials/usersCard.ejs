@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <% users.forEach(user => { %>
+      <div class="col-md-4">
+        <a href="">
+          <div class="card usersCard mb-3">
+            <div class="card-body">
+              <h3><%= user.name %></h3>
+              <div class="btns">
+                <a href="">Düzenle</a>
+                <a href="/admin/user/delete/<%= user.id %>">Sil</a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% }) %>
+    <div class="col-md-4">
+      <div class="card usersCard">
+        <div class="card-body">
+          <h3>Kullanıcı Ekle</h3>
+          <div class="createUser">
+            <a href="/admin/user/create">+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
