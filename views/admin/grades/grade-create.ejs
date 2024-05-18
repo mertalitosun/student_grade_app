@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/head') %>
+</head>
+<body>
+    <%- include('../../partials/navbar') %>
+    <div class="container mt-5">
+        <form method="post">
+            <div class="row mb-3">
+                <label for="courseName" class="col-md-2 form-label">Ders:</label>
+                <div class="col-md-6">
+                    <select name="courseName" id="courseName" class="form-control">
+                        <option value="-1">Seçiniz</option>
+                        <% courses.forEach(course => { %>
+                         <option value="<%= course.id %>"><%= course.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="gradeCategoryName" class="col-md-2 form-label">Kategori:</label>
+                <div class="col-md-6">
+                    <select name="gradeCategoryName" id="gradeCategoryName" class="form-control">
+                        <option value="-1">Seçiniz</option>
+                        <% noteCategories.forEach(noteCategory => { %>
+                            <option value="<%= noteCategory.id %>"><%= noteCategory.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="grade" class="col-md-2 form-label">Not:</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" name="grade" id="grade">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-outline-success">Ekle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

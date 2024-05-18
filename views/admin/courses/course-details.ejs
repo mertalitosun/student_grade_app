@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('../../partials/head') %>
+</head>
+<body>
+    <%- include('../../partials/navbar') %>
+    <div class="container d-flex align-items-center justify-content-center flex-column mt-3">
+        <h2>Kurs Adı</h2>
+        <div class="grades">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th  class="text-center">Notlar</th>
+                        <th><a href="/admin/grade/create">Not Ekle</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% noteCategories.forEach(noteCategory => { %>
+                        <tr>
+                            <td><%= noteCategory.name %></td>
+                            <td>
+                                <% 
+                                let categoryNotes = notes.filter(note => note.categoryid == noteCategory.id);
+                                if (categoryNotes.length > 0) {
+                                    categoryNotes.forEach(note => { %>
+                                        <div><%= note.note %></div>
+                                    <% });
+                                } else { %>
+                                    <div>Not Yok</div>
+                                <% } %>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbeody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
